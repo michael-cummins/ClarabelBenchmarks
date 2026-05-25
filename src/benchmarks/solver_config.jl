@@ -16,7 +16,7 @@ ENV["MKL_PARDISO_PATH"] = "/opt/intel/oneapi/mkl/latest/lib/"
 #Clarabel (Julia version )
 SOLVER_CONFIG[:Clarabel] = SettingsDict(
     :max_threads => 1,
-    :direct_solve_method => :auto,
+    :direct_solve_method => :qdldl,
 )
 
 #Clarabel (Rust version )
@@ -95,4 +95,7 @@ SOLVER_CONFIG[:SeDuMi] = SettingsDict(
 
 #SDPT3
 SOLVER_CONFIG[:SDPT3] = SettingsDict(
+)
+
+SOLVER_CONFIG[:QTQP] = SettingsDict(
 )

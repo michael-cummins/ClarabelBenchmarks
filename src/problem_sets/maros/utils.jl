@@ -5,7 +5,16 @@ function maros_get_test_names()
     srcpath = joinpath(@__DIR__,"targets/mat")
     #get Maros archive path and get names of data files
     files = filter(endswith(".mat"), readdir(srcpath))
-    return [splitext(f)[1] for f in files]
+
+    cone_files = []
+    for file in files
+        data = maros_load(splitext(file)[1])
+        if size(data[4], 1) >= 2
+            push!(cone_files, splitext(file)[1])
+        end
+    end
+
+    return cone_files
 
 end
 

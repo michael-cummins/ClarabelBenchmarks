@@ -80,7 +80,8 @@ function run_benchmarks_inner(
     groups = Dict{String,Dict}()
 
     groups[classkey] = Dict()
-
+    display(groups)
+    
     ntests = length(keys(PROBLEMS[classkey]))
     
     for (i,test_name) in enumerate(keys(PROBLEMS[classkey]))
@@ -554,24 +555,31 @@ function benchmark(packages, classkey; exclude = Regex[], time_limit = Inf,
 
 end
 
-function write_sgm_table_file(filename,out)
+function write_sgm_table_file(filename::String, out::DataFrame)
+    # Use makeunique=true to prevent DuplicateVariableName errors
+    table = hcat(out[!, 1], out; makeunique=true) 
+    
+    # vcat avoids splatting overhead and enforces Vector{String} type stability
+    headers = vcat(["", ""], names(out)[2:end])  
+    alignment = vcat([:l, :l], fill(:c, length(headers) - 2))
 
+    # Using `!` replaces the column rather than mutating it in-place.
+    # This prevents InexactError if the original columns were numerical types.
+    table[!, 1] = ["Shifted GM", "", "Failure Rate (%)", ""]
+    table[!, 2] = ["Full Acc.", "Low Acc.", "Full Acc.", "Low Acc."]
 
-    table = hcat(out[:,1],out)  #adds extra leading column
-    data = out[1:end,2:end]
-    headers = ["","",names(out)[2:end]...]  #drops "solvers"
-    alignment = [:l,:l,fill(:c,length(headers)-2)...]
-
-    #now we have 2 leading columns, with 4 rows.  
-    #Give them custom strings
-    table[:,1] = ["Shifted GM","","Failure Rate (%)",""]
-    table[:,2] = ["Full Acc.","Low Acc.","Full Acc.","Low Acc."]
-
-    io = open(filename, "w");
-    pretty_table(io, table,header = headers, alignment = alignment, backend = Val(:latex))
-
-    close(io)
-
+    # Use a do-block to guarantee the IO stream is closed even if an exception occurs
+    open(filename, "w") do io
+        pretty_table(
+            io, 
+            table; 
+            column_labels = headers, 
+            alignment = alignment, 
+            backend = :latex # Direct dispatch on Val is strictly preferred
+        )
+    end
+    
+    return nothing
 end
 
 function build_results_tables(df; ok_status = nothing)
