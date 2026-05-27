@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.24)  25 MAY 2026 21:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.24)  27 MAY 2026 17:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -249,7 +249,33 @@ File: ../results/plots/bench_mpc_time.pdf Graphic file (type pdf)
 <use ../results/plots/bench_mpc_time.pdf>
 Package pdftex.def Info: ../results/plots/bench_mpc_time.pdf  used on input line 20.
 (pdftex.def)             Requested size: 239.66309pt x 159.77621pt.
- (../results/tables/bench_mpc_sgm.tex) [2 <../results/plots/bench_mpc_performance.pdf> <../results/plots/bench_mpc_time.pdf>] [3] (../results/tables/bench_maros_detail_table.tex
+ (../results/tables/bench_mpc_sgm.tex)
+<../results/plots/bench_netlib_feasible_performance.pdf, id=17, 602.25pt x 401.5pt>
+File: ../results/plots/bench_netlib_feasible_performance.pdf Graphic file (type pdf)
+<use ../results/plots/bench_netlib_feasible_performance.pdf>
+Package pdftex.def Info: ../results/plots/bench_netlib_feasible_performance.pdf  used on input line 27.
+(pdftex.def)             Requested size: 239.66309pt x 159.77621pt.
+<../results/plots/bench_netlib_feasible_time.pdf, id=18, 602.25pt x 401.5pt>
+File: ../results/plots/bench_netlib_feasible_time.pdf Graphic file (type pdf)
+<use ../results/plots/bench_netlib_feasible_time.pdf>
+Package pdftex.def Info: ../results/plots/bench_netlib_feasible_time.pdf  used on input line 27.
+(pdftex.def)             Requested size: 239.66309pt x 159.77621pt.
+ (../results/tables/bench_netlib_feasible_sgm.tex)
+<../results/plots/bench_netlib_infeasible_performance.pdf, id=19, 602.25pt x 401.5pt>
+File: ../results/plots/bench_netlib_infeasible_performance.pdf Graphic file (type pdf)
+<use ../results/plots/bench_netlib_infeasible_performance.pdf>
+Package pdftex.def Info: ../results/plots/bench_netlib_infeasible_performance.pdf  used on input line 28.
+(pdftex.def)             Requested size: 239.66309pt x 159.77621pt.
+<../results/plots/bench_netlib_infeasible_time.pdf, id=20, 602.25pt x 401.5pt>
+File: ../results/plots/bench_netlib_infeasible_time.pdf Graphic file (type pdf)
+<use ../results/plots/bench_netlib_infeasible_time.pdf>
+Package pdftex.def Info: ../results/plots/bench_netlib_infeasible_time.pdf  used on input line 28.
+(pdftex.def)             Requested size: 239.66309pt x 159.77621pt.
+ (../results/tables/bench_netlib_infeasible_sgm.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <../results/plots/bench_mpc_performance.pdf> <../results/plots/bench_mpc_time.pdf> <../results/plots/bench_netlib_feasible_performance.pdf> <../results/plots/bench_netlib_feasible_time.pdf>] [3 <../results/plots/bench_netlib_infeasible_performance.pdf> <../results/plots/bench_netlib_infeasible_time.pdf>] (../results/tables/bench_maros_detail_table.tex
 ../results/tables/bench_maros_detail_table.tex:5: Extra alignment tab has been changed to \cr.
 <template> ... width\arrayrulewidth }\endtemplate 
                                                   
@@ -274,43 +300,66 @@ So I'll assume that you meant to type \cr instead.
 
 ] (../results/tables/bench_mpc_detail_table.tex
 ../results/tables/bench_mpc_detail_table.tex:5: Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.5 ...ulticolumn{3}{c||}{\underline{iterations}}&
-                                                   \multicolumn{3}{c||}{\und...
+<template> ... width\arrayrulewidth }\endtemplate 
+                                                  
+l.5  & &  & & &
+                \multicolumn{3}{c||}{\underline{iterations}}& \multicolumn{3...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
+../results/tables/bench_mpc_detail_table.tex:5: Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.5 ...{3}{c||}{\underline{time per iteration(s)}}
+                                                  & \multicolumn{3}{c||}{\un...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
 
-Package longtable Warning: Column widths have changed
-(longtable)                in table 2 on input line 62.
-
-[5
+) [5
 
 
-]) [6]
+] (../results/tables/bench_netlib_feasible_detail_table.tex
+../results/tables/bench_netlib_feasible_detail_table.tex:5: Extra alignment tab has been changed to \cr.
+<template> ... width\arrayrulewidth }\endtemplate 
+                                                  
+l.5  & &  & & &
+                \multicolumn{3}{c||}{\underline{iterations}}& \multicolumn{3...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
 
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
+../results/tables/bench_netlib_feasible_detail_table.tex:5: Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.5 ...{3}{c||}{\underline{time per iteration(s)}}
+                                                  & \multicolumn{3}{c||}{\un...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
 
-(./main.aux)
+) [6
+
+
+] (./main.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 4282 strings out of 476025
- 75064 string characters out of 5790017
- 1914388 words of memory out of 5000000
- 24698 multiletter control sequences out of 15000+600000
- 517757 words of font info for 50 fonts, out of 8000000 for 9000
+ 4333 strings out of 476025
+ 77671 string characters out of 5790017
+ 1863388 words of memory out of 5000000
+ 24737 multiletter control sequences out of 15000+600000
+ 517456 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,11n,67p,304b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on main.pdf (6 pages, 180117 bytes).
+ 71i,12n,67p,304b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on main.pdf (6 pages, 242034 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -97,5 +97,11 @@ SOLVER_CONFIG[:SeDuMi] = SettingsDict(
 SOLVER_CONFIG[:SDPT3] = SettingsDict(
 )
 
-SOLVER_CONFIG[:QTQP] = SettingsDict(
-)
+SOLVER_CONFIG[:QTQP] = SettingsDict()
+
+SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_orthant")] = deepcopy(SOLVER_CONFIG[:QTQP])
+SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_orthant")][:init_strategy] = :orthant
+
+SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_trivial")] = deepcopy(SOLVER_CONFIG[:QTQP])
+SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_trivial")][:init_strategy] = :orthant
+SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_trivial")][:min_static_regularization] = 1e-11

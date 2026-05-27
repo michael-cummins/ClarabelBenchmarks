@@ -73,4 +73,16 @@ module ClarabelBenchmarks
     end
     export ClarabelRsNonchordal
 
+    module QTQP_orthant
+        using QTQP
+        Optimizer = QTQP.Optimizer
+    end
+    export QTQP_orthant
+
+    module QTQP_trivial
+        using QTQP
+        Optimizer = QTQP.Optimizer
+    end
+    export QTQP_trivial
+
 end

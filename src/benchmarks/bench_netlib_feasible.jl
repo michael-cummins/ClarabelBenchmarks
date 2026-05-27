@@ -2,17 +2,18 @@
 
 # include any solvers you want to test 
 using ClarabelBenchmarks, DataFrames, JLD2
-using Clarabel, QTQP
+using Clarabel, QTQP, OSQP
+using Revise
 # using Gurobi, MosekTools
 # using ClarabelRs
 
-solvers = [Clarabel,QTQP]
+solvers = [QTQP_orthant, Clarabel, OSQP]
 tag     = nothing
 class   = "netlib_feasible"
 verbose = false
 time_limit = 300.
-rerun   = false
-plotlist = [Clarabel,QTQP]
+rerun   = true
+plotlist = [QTQP_orthant,Clarabel, OSQP]
 
 df = ClarabelBenchmarks.benchmark(
     solvers, class;

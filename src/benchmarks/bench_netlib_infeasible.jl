@@ -10,7 +10,7 @@ tag     = nothing
 class   = "netlib_infeasible"
 verbose = false
 time_limit = 300.
-rerun   = false
+rerun   = true
 plotlist = [Clarabel,QTQP]
 
 # these status codes count as "success" for  
