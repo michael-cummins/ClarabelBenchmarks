@@ -155,18 +155,21 @@ end
 
 
 
-# MPC problems 
-for test_name in mpc_get_test_names()
+# MPC problems are discovered from generated .mat files at runtime so that
+# precompilation does not cache a stale target list.
+function refresh_mpc_problems!()
+    problems = get!(PROBLEMS, "mpc", Dict{String,Function}())
+    empty!(problems)
 
-    group_name = "mpc"
-    fcn_name   = Symbol(group_name * "_" * test_name )
-
-    @eval begin
-            @add_problem $group_name $test_name function $fcn_name(
-                model; kwargs...    
-            )
-                return solve_generic(mpc_solve_problem,model,$test_name; kwargs...)
+    for test_name in mpc_get_test_names()
+        problems[test_name] = let test_name = test_name
+            function (model; kwargs...)
+                return solve_generic(mpc_solve_problem, model, test_name; kwargs...)
             end
+        end
     end
-end 
+    return nothing
+end
+
+refresh_mpc_problems!()
 

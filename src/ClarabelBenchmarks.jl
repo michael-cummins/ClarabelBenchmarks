@@ -26,6 +26,10 @@ module ClarabelBenchmarks
     end 
     rebuild()
 
+    function __init__()
+        refresh_mpc_problems!()
+    end
+
     #plotting functions 
     include("./performance_profile.jl")
 

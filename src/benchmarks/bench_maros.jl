@@ -6,13 +6,13 @@ using Clarabel, QTQP
 # using Gurobi, MosekTools
 # using ClarabelRs
 
-solvers = [Clarabel,QTQP_orthant]
+solvers = [QTQP_orthant, Clarabel]
 tag     = nothing
 class   = "maros"
-verbose = true
+verbose = false
 time_limit = 300.
 rerun = false
-plotlist = [Clarabel,QTQP_orthant]
+plotlist = [QTQP_orthant, Clarabel]
 
 
 df = ClarabelBenchmarks.benchmark(
@@ -22,3 +22,5 @@ df = ClarabelBenchmarks.benchmark(
     tag = tag, 
     rerun = rerun,
     plotlist = plotlist)
+
+show(df, allrows=true)
