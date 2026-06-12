@@ -1,0 +1,22 @@
+\scriptsize
+\begin{longtable}{lcccc||cc||cc||cc||}
+\caption{\detailtablecaption}
+\\
+ & &  & & & \multicolumn{2}{c||}{\underline{iterations}}& \multicolumn{2}{c||}{\underline{time per iteration(s)}}& \multicolumn{2}{c||}{\underline{total time (s)}}\\[2ex] 
+Problem & vars. & cons. & nnz(A) & nnz(P)  & Clarabel & QTQP & Clarabel & QTQP & Clarabel & QTQP\\[1ex]
+\hline
+\endhead
+\sc{issue\_103} & 5 & 7 & 10 & 15 &  \winner  7 &  \winner  7 &  \winner  3.41e-05 &   4.19e-05 &  \winner  0.000239 &   0.000293\\ 
+\sc{huber\_fitting\_n\_10} & 55 & 45 & 87 & 15 &   7 &  \winner  6 &  \winner  3.84e-05 &   7.13e-05 &  \winner  0.000269 &   0.000428\\ 
+\sc{portfolio\_optimization\_n\_100} & 110 & 111 & 513 & 110 &   10 &  \winner  8 &  \winner  7.19e-05 &   9.29e-05 &  \winner  0.000719 &   0.000743\\ 
+\sc{huber\_fitting\_n\_100} & 550 & 450 & 2642 & 150 &  \winner  8 &  \winner  8 &  \winner  0.000494 &   0.00108 &  \winner  0.00395 &   0.00861\\ 
+\sc{svm\_L2\_n\_10} & 510 & 1000 & 1973 & 10 &  \winner  9 &   10 &  \winner  0.000283 &   0.000641 &  \winner  0.00255 &   0.00641\\ 
+\sc{portfolio\_optimization\_n\_1000} & 1100 & 1101 & 32065 & 1100 &   13 &  \winner  9 &  \winner  0.00405 &   0.00544 &   0.0526 &  \winner  0.049\\ 
+\sc{huber\_fitting\_n\_500} & 2750 & 2250 & 50672 & 750 &  \winner  8 &   9 &  \winner  0.0276 &   0.0357 &  \winner  0.22 &   0.321\\ 
+\sc{huber\_fitting\_n\_1000} & 5500 & 4500 & 195345 & 1500 &  \winner  9 &   10 &   0.243 &  \winner  0.176 &   2.19 &  \winner  1.76\\ 
+\sc{portfolio\_optimization\_n\_5000} & 5500 & 5501 & 759856 & 5500 &   18 &  \winner  11 &  \winner  0.209 &   0.254 &   3.76 &  \winner   2.8\\ 
+\sc{svm\_L2\_n\_100} & 5100 & 10000 & 109929 & 100 &  \winner  11 &   13 &   0.0268 &  \winner  0.026 &  \winner  0.295 &   0.338\\ 
+\sc{portfolio\_optimization\_n\_10000} & 11000 & 11001 & 3019189 & 11000 &   18 &  \winner  12 &  \winner  2.37 &   2.39 &   42.6 &  \winner  28.7\\ 
+\sc{portfolio\_optimization\_n\_15000} & 16500 & 16501 & 6782628 & 16500 &   18 &  \winner  12 &   5.79 &  \winner  5.55 &    104 &  \winner  66.6\\ 
+\sc{svm\_L2\_n\_500} & 25500 & 50000 & 2548936 & 500 &  \winner  12 &   14 &   1.13 &  \winner  1.07 &  \winner  13.6 &   14.9\\ 
+\end{longtable}

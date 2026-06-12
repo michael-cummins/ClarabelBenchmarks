@@ -17,6 +17,7 @@ ENV["MKL_PARDISO_PATH"] = "/opt/intel/oneapi/mkl/latest/lib/"
 SOLVER_CONFIG[:Clarabel] = SettingsDict(
     :max_threads => 1,
     :direct_solve_method => :qdldl,
+    :equilibrate_enable => true,
 )
 
 #Clarabel (Rust version )
@@ -64,8 +65,8 @@ SOLVER_CONFIG[:Gurobi] = SettingsDict(
 
 #OSQP
 SOLVER_CONFIG[:OSQP] = SettingsDict(
-    :eps_abs => 1e-5,
-    :eps_rel => 1e-5,
+    :eps_abs => 1e-3,
+    :eps_rel => 1e-3,
 )
 
 #SCS
@@ -77,7 +78,7 @@ SOLVER_CONFIG[:HiGHS] = SettingsDict(
     :presolve => "off",
     :threads => 1,
     :run_crossover => "off",
-    #:solver = "ipm"
+    # :solver = "ipm"
 )
 
 #Hypatia
@@ -97,7 +98,26 @@ SOLVER_CONFIG[:SeDuMi] = SettingsDict(
 SOLVER_CONFIG[:SDPT3] = SettingsDict(
 )
 
-SOLVER_CONFIG[:QTQP] = SettingsDict()
+SOLVER_CONFIG[:QTQP] = SettingsDict(
+    :min_static_regularization => 1e-8,
+    :equilibrate => true,
+)
+
+SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_indirect")] = SettingsDict(
+    :atol => 1e-3,
+    :rtol => 1e-3,
+    :linear_solver_atol => 1e-12,
+    :linear_solver_rtol => 1e-7,
+    :kkt_solver => :indirect,
+    :indirect_solve_method => :gmres,
+    :indirect_preconditioner => :nystrom,
+    :verbose => true
+)
+
+SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_shifted")] = SettingsDict(
+    :shifted_central_path => true,
+    :step_size_scale => 0.995 
+)
 
 SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_orthant")] = deepcopy(SOLVER_CONFIG[:QTQP])
 SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_orthant")][:init_strategy] = :orthant

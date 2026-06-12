@@ -5,13 +5,13 @@ using ClarabelBenchmarks, DataFrames, JLD2
 using Revise
 using Clarabel, QTQP, ECOS, OSQP
 
-solvers = [Clarabel, QTQP]
+solvers = [QTQP_indirect]
 tag     = nothing
 class   = "mpc"
-verbose = false
-time_limit = 300.
-rerun = false
-plotlist = [Clarabel, QTQP]
+verbose = true
+time_limit = 5.
+rerun = true
+plotlist = [QTQP_indirect, OSQP]
 
 df = ClarabelBenchmarks.benchmark(
     solvers, class;

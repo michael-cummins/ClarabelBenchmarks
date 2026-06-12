@@ -547,7 +547,7 @@ function benchmark(packages, classkey; exclude = Regex[], time_limit = Inf,
     #tabulated results data 
     filename = "bench_" * classkey * "_detail_table.tex"
     filename = joinpath(get_path_results_tables(),filename)
-    tables = build_results_tables(df, ok_status = ok_status)
+    tables = build_results_tables(df, plotlist = plotlist, ok_status = ok_status)
     write_results_tables(tables,filename)
 
 
@@ -582,10 +582,10 @@ function write_sgm_table_file(filename::String, out::DataFrame)
     return nothing
 end
 
-function build_results_tables(df; ok_status = nothing)
+function build_results_tables(df; plotlist = nothing, ok_status = nothing)
 
     problems = unique(df.problem)
-    solvers = unique(df.solver)
+    solvers = String.(unique(df.solver))
     group = unique(df.group)[1]
 
     if(isnothing(ok_status))
@@ -601,7 +601,12 @@ function build_results_tables(df; ok_status = nothing)
 
     println(length(problems), " remaining...")
 
-    solvers = sort(intersect(solvers,["ClarabelRs","ECOS","Mosek"]))
+    if !isnothing(plotlist)
+        available_solvers = Set(solvers)
+        solvers = filter(in(available_solvers), String.(Symbol.(plotlist)))
+    end
+    solvers = unique(solvers)
+    isempty(solvers) && throw(ArgumentError("No requested solvers are present in the benchmark results"))
 
     # insert columns for each solver, for iterations, time / iteration / total time
     tables = Dict()
@@ -685,7 +690,8 @@ function write_results_tables(tables,filename)
 
     println(io,"\\scriptsize")
 
-    println(io,"\\begin{longtable}" * "{l" * "cccc" * "||ccc"^(length(solvers)) * "||}")
+    solver_columns = "c"^length(solvers)
+    println(io,"\\begin{longtable}" * "{l" * "cccc" * ("||" * solver_columns)^3 * "||}")
 
     println(io,"\\caption{\\detailtablecaption}")
     println(io,"\\\\")
@@ -693,7 +699,7 @@ function write_results_tables(tables,filename)
     #print primary headerss
     print(io, " & &  & & ");
     for label in ["iterations","time per iteration(s)", "total time (s)"]
-        print(io,"& \\multicolumn{3}{c||}{\\underline{$label}}");
+        print(io,"& \\multicolumn{$(length(solvers))}{c||}{\\underline{$label}}");
     end 
     print(io, "\\\\[2ex] \n")
 
@@ -701,7 +707,8 @@ function write_results_tables(tables,filename)
     print(io, "Problem & vars. & cons. & nnz(A) & nnz(P) ");
     for i = 1:3
         for solver in solvers 
-            print(io," & $solver");
+            solver_label = replace(solver, "_" => raw"\_")
+            print(io," & $solver_label");
         end 
     end
     print(io, "\\\\[1ex]\n")
@@ -713,8 +720,8 @@ function write_results_tables(tables,filename)
 
         problem = replace(problem,"_" => raw"\_")
         print(io, "\\sc{" * problem * "}")
-        print(io, " & ", tables[:dims][i,:m])
         print(io, " & ", tables[:dims][i,:n])
+        print(io, " & ", tables[:dims][i,:m])
         print(io, " & ", tables[:dims][i,:nnzA])
         print(io, " & ", tables[:dims][i,:nnzP])
 

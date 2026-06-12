@@ -2,17 +2,16 @@
 
 # include any solvers you want to test 
 using ClarabelBenchmarks, DataFrames, JLD2
-using Clarabel, ECOS, HiGHS
-using Gurobi, MosekTools
-using ClarabelRs
+using Clarabel, QTQP, HiGHS
 
-solvers = [Clarabel,Mosek,ClarabelRs,ECOS,Gurobi,HiGHS]
+
+solvers = [Clarabel,QTQP_shifted]
 tag     = nothing
 class   = "sslsq"
 verbose = false
 time_limit = 300.
 rerun = false
-plotlist = [Clarabel,Mosek,ClarabelRs,ECOS,Gurobi,HiGHS]
+plotlist = [Clarabel,QTQP_shifted]
 
 
 df = ClarabelBenchmarks.benchmark(

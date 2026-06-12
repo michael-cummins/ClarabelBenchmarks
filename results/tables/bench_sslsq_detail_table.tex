@@ -1,0 +1,55 @@
+\scriptsize
+\begin{longtable}{lcccc||cc||cc||cc||}
+\caption{\detailtablecaption}
+\\
+ & &  & & & \multicolumn{2}{c||}{\underline{iterations}}& \multicolumn{2}{c||}{\underline{time per iteration(s)}}& \multicolumn{2}{c||}{\underline{total time (s)}}\\[2ex] 
+Problem & vars. & cons. & nnz(A) & nnz(P)  & Clarabel & ClarabelBenchmarks.QTQP\_shifted & Clarabel & ClarabelBenchmarks.QTQP\_shifted & Clarabel & ClarabelBenchmarks.QTQP\_shifted\\[1ex]
+\hline
+\endhead
+\sc{NYPA\_Maragal\_1\_lasso} & 60 & 60 & 322 & 32 &   9 &  \winner  7 &  \winner  5.96e-05 &   0.00012 &  \winner  0.000537 &   0.000837\\ 
+\sc{NYPA\_Maragal\_1\_huber} & 110 & 96 & 394 & 32 &   6 &  \winner  5 &  \winner  6.88e-05 &   0.000153 &  \winner  0.000413 &   0.000763\\ 
+\sc{HB\_ash85\_lasso} & 255 & 255 & 948 & 85 &  \winner  8 &  \winner  8 &   0.000171 &  \winner  0.000152 &   0.00137 &  \winner  0.00121\\ 
+\sc{HB\_ash85\_huber} & 340 & 255 & 948 & 85 &  \winner  6 &   9 &  \winner  0.000213 &   0.000298 &  \winner  0.00128 &   0.00268\\ 
+\sc{HB\_ash219\_lasso} & 389 & 389 & 997 & 219 &  \winner  8 &  \winner  8 &  \winner  0.00029 &   0.000886 &  \winner  0.00232 &   0.00709\\ 
+\sc{HB\_ash331\_lasso} & 539 & 539 & 1409 & 331 &  \winner  7 &  \winner  7 &  \winner  0.000279 &   0.00028 &  \winner  0.00195 &   0.00196\\ 
+\sc{HB\_abb313\_lasso} & 665 & 665 & 2574 & 313 &  \winner  9 &  \winner  9 &   0.000403 &  \winner  0.000399 &   0.00363 &  \winner  0.00359\\ 
+\sc{HB\_ash219\_huber} & 742 & 657 & 1533 & 219 &   9 &  \winner  8 &  \winner  0.000195 &   0.000253 &  \winner  0.00175 &   0.00203\\ 
+\sc{HB\_ash292\_lasso} & 876 & 876 & 3668 & 292 &  \winner  8 &   9 &   0.00227 &  \winner  0.000559 &   0.0181 &  \winner  0.00503\\ 
+\sc{HB\_ash608\_lasso} & 984 & 984 & 2576 & 608 &  \winner  8 &  \winner  8 &  \winner  0.000722 &   0.000778 &  \winner  0.00578 &   0.00622\\ 
+\sc{HB\_ash292\_huber} & 1168 & 876 & 3668 & 292 &  \winner  6 &   9 &   0.000609 &  \winner  0.000453 &  \winner  0.00365 &   0.00408\\ 
+\sc{HB\_abb313\_huber} & 1115 & 939 & 3122 & 313 &  \winner  9 &  \winner  9 &   0.000501 &  \winner  0.000363 &   0.00451 &  \winner  0.00327\\ 
+\sc{HB\_ash331\_huber} & 1097 & 993 & 2317 & 331 &  \winner  8 &  \winner  8 &   0.000382 &  \winner  0.000374 &   0.00305 &  \winner  0.00299\\ 
+\sc{NYPA\_Maragal\_2\_lasso} & 1255 & 1255 & 6312 & 555 &  \winner  7 &  \winner  7 &  \winner  0.001 &   0.00106 &  \winner  0.00701 &   0.00745\\ 
+\sc{HB\_ash958\_lasso} & 1542 & 1542 & 4042 & 958 &  \winner  7 &  \winner  7 &  \winner  0.000794 &   0.00158 &  \winner  0.00555 &   0.0111\\ 
+\sc{HB\_illc1033\_lasso} & 1673 & 1673 & 7032 & 1033 &   19 &  \winner  9 &  \winner  0.00071 &   0.000859 &   0.0135 &  \winner  0.00773\\ 
+\sc{HB\_well1033\_lasso} & 1673 & 1673 & 7045 & 1033 &   13 &  \winner  8 &   0.000608 &  \winner  0.000605 &   0.00791 &  \winner  0.00484\\ 
+\sc{NYPA\_Maragal\_2\_huber} & 2015 & 1665 & 7132 & 555 &   8 &  \winner  7 &  \winner  0.00122 &   0.00496 &  \winner  0.00978 &   0.0347\\ 
+\sc{HB\_ash608\_huber} & 2012 & 1824 & 4256 & 608 &   9 &  \winner  8 &  \winner  0.000471 &   0.000486 &   0.00424 &  \winner  0.00389\\ 
+\sc{HB\_ash958\_huber} & 3166 & 2874 & 6706 & 958 &  \winner  9 &  \winner  9 &  \winner  0.00131 &   0.00235 &  \winner  0.0118 &   0.0212\\ 
+\sc{HB\_illc1033\_huber} & 3419 & 3099 & 9884 & 1033 &  \winner  7 &   19 &  \winner  0.00123 &   0.00147 &  \winner  0.00863 &   0.0279\\ 
+\sc{HB\_well1033\_huber} & 3419 & 3099 & 9897 & 1033 &  \winner  7 &   18 &   0.00103 &  \winner  0.000756 &  \winner  0.00722 &   0.0136\\ 
+\sc{HB\_illc1850\_lasso} & 3274 & 3274 & 13334 & 1850 &   13 &  \winner  9 &   0.00141 &  \winner  0.00138 &   0.0183 &  \winner  0.0124\\ 
+\sc{HB\_well1850\_lasso} & 3274 & 3274 & 13453 & 1850 &   12 &  \winner  8 &   0.00129 &  \winner  0.00128 &   0.0155 &  \winner  0.0103\\ 
+\sc{NYPA\_Maragal\_3\_lasso} & 3410 & 3410 & 23521 & 1690 &   7 &  \winner  6 &   0.00617 &  \winner  0.00566 &   0.0432 &  \winner  0.0339\\ 
+\sc{NYPA\_Maragal\_4\_lasso} & 4032 & 4032 & 32819 & 1964 &  \winner  6 &  \winner  6 &   0.0145 &  \winner  0.0123 &   0.0869 &  \winner  0.0739\\ 
+\sc{NYPA\_Maragal\_3\_huber} & 5930 & 5070 & 26841 & 1690 &   8 &  \winner  7 &   0.0071 &  \winner  0.00631 &   0.0568 &  \winner  0.0442\\ 
+\sc{HB\_illc1850\_huber} & 6262 & 5550 & 17886 & 1850 &  \winner  7 &   27 &   0.0144 &  \winner  0.00134 &   0.101 &  \winner  0.0362\\ 
+\sc{HB\_well1850\_huber} & 6262 & 5550 & 18005 & 1850 &  \winner  7 &   28 &  \winner  0.0024 &   0.00274 &  \winner  0.0168 &   0.0767\\ 
+\sc{NYPA\_Maragal\_4\_huber} & 6926 & 5892 & 36539 & 1964 &  \winner  7 &  \winner  7 &  \winner  0.0158 &   0.346 &  \winner  0.111 &   2.42\\ 
+\sc{NYPA\_Maragal\_5\_lasso} & 11294 & 11294 & 111025 & 4654 &   8 &  \winner  7 &   0.0957 &  \winner  0.0906 &   0.766 &  \winner  0.634\\ 
+\sc{NYPA\_Maragal\_5\_huber} & 17282 & 13962 & 116361 & 4654 &  \winner  8 &  \winner  8 &   0.106 &  \winner  0.093 &   0.851 &  \winner  0.744\\ 
+\sc{NYPA\_Maragal\_6\_lasso} & 41559 & 41559 & 599557 & 21255 &  \winner  7 &  \winner  7 &    4.2 &  \winner  4.03 &   29.4 &  \winner  28.2\\ 
+\sc{NYPA\_Maragal\_6\_huber} & 73917 & 63765 & 643969 & 21255 &  \winner  7 &  \winner  7 &   4.53 &  \winner  3.82 &   31.7 &  \winner  26.8\\ 
+\sc{Pereyra\_landmark\_lasso} & 77360 & 77360 & 1229616 & 71952 &  \winner  8 &   9 &   0.204 &  \winner  0.124 &   1.63 &  \winner  1.12\\ 
+\sc{NYPA\_Maragal\_7\_lasso} & 99973 & 99973 & 1353638 & 46845 &  \winner  7 &  \winner  7 &   8.85 &  \winner  8.02 &     62 &  \winner  56.1\\ 
+\sc{NYPA\_Maragal\_8\_huber} & 174713 & 99636 & 1474475 & 33212 &  \winner  8 &  \winner  8 &   5.15 &  \winner   4.5 &   41.2 &  \winner    36\\ 
+\sc{NYPA\_Maragal\_7\_huber} & 167099 & 140535 & 1434762 & 46845 &  \winner  10 &   15 &   8.31 &  \winner  8.07 &  \winner  83.1 &    121\\ 
+\sc{NYPA\_Maragal\_8\_lasso} & 183366 & 183366 & 1641935 & 33212 &  \winner  7 &  \winner  7 &   5.42 &  \winner  4.81 &   37.9 &  \winner  33.7\\ 
+\sc{Pereyra\_landmark\_huber} & 218560 & 215856 & 1506608 & 71952 &  \winner  9 &  \winner  9 &  \winner  0.179 &   0.206 &  \winner  1.61 &   1.85\\ 
+\sc{ANSYS\_Delor64K\_huber} & 1979502 & 194157 & 975735 & 64719 &  \winner  7 &  \winner  7 &  \winner  0.467 &   0.586 &  \winner  3.27 &    4.1\\ 
+\sc{ANSYS\_Delor338K\_huber} & 1916766 & 1029708 & 5927779 & 343236 &   8 &  \winner  7 &  \winner  1.01 &   1.24 &  \winner  8.05 &    8.7\\ 
+\sc{ANSYS\_Delor295K\_huber} & 2711130 & 887202 & 3879993 & 295734 &   8 &  \winner  7 &  \winner  0.893 &   1.27 &  \winner  7.15 &   8.92\\ 
+\sc{ANSYS\_Delor338K\_lasso} & 2117352 & 2117352 & 8103067 & 343236 &  \winner  7 &  \winner  7 &  \winner  1.79 &   1.93 &  \winner  12.6 &   13.5\\ 
+\sc{ANSYS\_Delor64K\_lasso} & 3635409 & 3635409 & 7858239 & 64719 &   8 &  \winner  7 &  \winner  1.93 &   2.43 &  \winner  15.5 &     17\\ 
+\sc{ANSYS\_Delor295K\_lasso} & 3943590 & 3943590 & 9992769 & 295734 &   8 &  \winner  7 &  \winner  2.37 &   4.44 &  \winner    19 &   31.1\\ 
+\end{longtable}

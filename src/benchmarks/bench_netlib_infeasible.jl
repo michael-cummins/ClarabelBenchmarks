@@ -5,13 +5,13 @@ using ClarabelBenchmarks, DataFrames, JLD2
 using Clarabel, QTQP
 using Revise
 
-solvers = [Clarabel,QTQP]
+solvers = [Clarabel,QTQP_shifted]
 tag     = nothing
 class   = "netlib_infeasible"
 verbose = false
 time_limit = 300.
-rerun   = true
-plotlist = [Clarabel,QTQP]
+rerun   = false
+plotlist = [Clarabel,QTQP_shifted]
 
 # these status codes count as "success" for  
 # the purpose of performance profiles

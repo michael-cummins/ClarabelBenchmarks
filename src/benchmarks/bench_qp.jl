@@ -2,13 +2,10 @@
 
 # include any solvers you want to test 
 using ClarabelBenchmarks, DataFrames, JLD2
-using Clarabel, ECOS, Gurobi, MosekTools
-using ClarabelRs
-using Tulip
-using HiGHS
-using Hypatia  
+using Clarabel, QTQP
 
-solvers = [ClarabelRs,Gurobi,Mosek,Clarabel,ECOS,HiGHS,Hypatia] 
+solvers = [Clarabel, QTQP] 
+tag=nothing
 class   = "qp"
 verbose = false
 time_limit = 180.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.30)  9 JUN 2026 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.30)  10 JUN 2026 16:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -326,23 +326,45 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 e.pdf> <../results/plots/bench_netlib_feasible_performance.pdf> <../results/plo
 ts/bench_netlib_feasible_time.pdf>] [3 <../results/plots/bench_netlib_infeasibl
 e_performance.pdf> <../results/plots/bench_netlib_infeasible_time.pdf>]
-(../results/tables/bench_maros_detail_table.tex
-! Extra alignment tab has been changed to \cr.
-<template> ... width\arrayrulewidth }\endtemplate 
-                                                  
-l.5  & &  & & &
-                \multicolumn{3}{c||}{\underline{iterations}}& \multicolumn{3...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
+(../results/tables/bench_qp_detail_table.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
 
- 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 1 on input line 22.
+
+) [4
+
+]
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+(main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+ ) 
 Here is how much of TeX's memory you used:
- 4341 strings out of 467871
- 78003 string characters out of 5418376
- 497416 words of memory out of 5000000
- 33186 multiletter control sequences out of 15000+600000
- 632277 words of font info for 55 fonts, out of 8000000 for 9000
+ 4355 strings out of 467871
+ 78297 string characters out of 5418376
+ 510539 words of memory out of 5000000
+ 33195 multiletter control sequences out of 15000+600000
+ 633191 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,70p,273b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 71i,12n,70p,277b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/mc524/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/mc524/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Users/mc524/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx9.pfb><C:/Users/mc524/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/mc524/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mc524/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mc524/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on main.pdf (4 pages, 259941 bytes).
+PDF statistics:
+ 66 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

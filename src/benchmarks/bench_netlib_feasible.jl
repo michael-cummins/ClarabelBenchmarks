@@ -7,13 +7,13 @@ using Revise
 # using Gurobi, MosekTools
 # using ClarabelRs
 
-solvers = [QTQP_orthant, Clarabel]
+solvers = [QTQP_shifted, QTQP]
 tag     = nothing
 class   = "netlib_feasible"
 verbose = false
 time_limit = 300.
 rerun   = false
-plotlist = [QTQP_orthant,Clarabel]
+plotlist = [QTQP_shifted, QTQP]
 
 df = ClarabelBenchmarks.benchmark(
     solvers, class;

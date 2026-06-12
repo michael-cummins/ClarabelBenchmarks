@@ -2,17 +2,15 @@
 
 # include any solvers you want to test 
 using ClarabelBenchmarks, DataFrames, JLD2
-using Clarabel, ECOS, HiGHS
-using Gurobi, MosekTools
-using ClarabelRs
+using Clarabel, QTQP, HiGHS
 
-solvers = [Clarabel,Mosek,ClarabelRs,ECOS,Gurobi,HiGHS]
+solvers = [QTQP, Clarabel]
 tag     = nothing
 class   = "opf_lp"
 verbose = false
 time_limit = 300.
 rerun = false
-plotlist = [Clarabel,Mosek,ClarabelRs,ECOS,Gurobi,HiGHS]
+plotlist = [Clarabel,QTQP]
 
 df = ClarabelBenchmarks.benchmark(
     solvers, class;

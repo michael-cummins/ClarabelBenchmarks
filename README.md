@@ -6,7 +6,7 @@ Benchmark tests for Clarabel solver
 Function pointers for all problems in the collection are available in `ClarabelBenchmarks.PROBLEMS`.   This is a Dict object with keys matching the problem classes defined in the `problem_sets`, e.g. `ClarabelBenchmarks.PROBLEMS["maros"]` gives a Dict of function pointers for the Maros problem set.  Individual problems can be solved like so:
 
 ```julia
-using ClarabelBenchmaks, Clarabel
+using ClarabelBenchmarks, Clarabel
 model = ClarabelBenchmarks.PROBLEMS["maros"]["AUG2D"](Clarabel.Optimizer)
 println("solve time: ", solve_time(model))
 ```
