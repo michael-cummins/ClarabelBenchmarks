@@ -17,15 +17,17 @@ settings_direct = SettingsDict(
     :kkt_solver => :direct,
     :verbose => true,
     :shifted_central_path => false,
-    :step_size_scale => 0.995 
+    :step_size_scale => 0.99,
+    :max_iterative_refinement_steps => 10,
+    :linear_solver_rtol => 1e-12
 )
 
-function test_single(problem, settings)
+function test_single(problem, settings; bench="maros")
     model = Model(QTQP.Optimizer)
     for (key, value) in settings
         set_optimizer_attribute(model, string(key), value)
     end
-    ClarabelBenchmarks.PROBLEMS["netlib_feasible"][problem](model)
+    ClarabelBenchmarks.PROBLEMS[bench][problem](model)
     println("solve time: ", solve_time(model))
 end
 

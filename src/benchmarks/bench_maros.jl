@@ -3,13 +3,13 @@
 # include any solvers you want to test 
 using ClarabelBenchmarks, DataFrames, JLD2
 using Clarabel, QTQP
-# using Gurobi, MosekTools
+using Gurobi
 # using ClarabelRs
 
-solvers = [QTQP,Clarabel]
+solvers = [QTQP, Clarabel]
 tag     = nothing
 class   = "maros"
-verbose = false
+verbose = true
 time_limit = 300.
 rerun = false
 plotlist = [QTQP, Clarabel]

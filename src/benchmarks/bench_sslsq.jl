@@ -5,13 +5,13 @@ using ClarabelBenchmarks, DataFrames, JLD2
 using Clarabel, QTQP, HiGHS
 
 
-solvers = [Clarabel,QTQP_shifted]
+solvers = [Clarabel,QTQP]
 tag     = nothing
 class   = "sslsq"
 verbose = false
 time_limit = 300.
 rerun = false
-plotlist = [Clarabel,QTQP_shifted]
+plotlist = [Clarabel,QTQP]
 
 
 df = ClarabelBenchmarks.benchmark(

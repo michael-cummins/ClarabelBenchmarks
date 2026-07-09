@@ -99,8 +99,10 @@ SOLVER_CONFIG[:SDPT3] = SettingsDict(
 )
 
 SOLVER_CONFIG[:QTQP] = SettingsDict(
-    :min_static_regularization => 1e-8,
-    :equilibrate => true,
+    :shifted_central_path => false,
+    :equilibrate => :ruiz,
+    :min_static_regularization => 1e-12,
+    :step_size_scale => 0.99 
 )
 
 SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_indirect")] = SettingsDict(
@@ -115,8 +117,10 @@ SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_indirect")] = SettingsDict(
 )
 
 SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_shifted")] = SettingsDict(
-    :shifted_central_path => true,
-    :step_size_scale => 0.995 
+    :shifted_central_path => false,
+    :min_static_regularization => 1e-12,
+    :equilibrate => :augmented,
+    :step_size_scale => 0.99 
 )
 
 SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_orthant")] = deepcopy(SOLVER_CONFIG[:QTQP])

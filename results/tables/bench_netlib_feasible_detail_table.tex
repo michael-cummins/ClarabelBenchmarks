@@ -3,109 +3,113 @@
 \caption{\detailtablecaption}
 \\
  & &  & & & \multicolumn{2}{c||}{\underline{iterations}}& \multicolumn{2}{c||}{\underline{time per iteration(s)}}& \multicolumn{2}{c||}{\underline{total time (s)}}\\[2ex] 
-Problem & vars. & cons. & nnz(A) & nnz(P)  & ClarabelBenchmarks.QTQP\_shifted & QTQP & ClarabelBenchmarks.QTQP\_shifted & QTQP & ClarabelBenchmarks.QTQP\_shifted & QTQP\\[1ex]
+Problem & vars. & cons. & nnz(A) & nnz(P)  & QTQP & Clarabel & QTQP & Clarabel & QTQP & Clarabel\\[1ex]
 \hline
 \endhead
-\sc{afiro} & 51 & 78 & 153 & 0 &  \winner  11 &  \winner  11 &   5.35e-05 &  \winner  5.07e-05 &   0.000588 &  \winner  0.000558\\ 
-\sc{kb2} & 68 & 120 & 390 & 0 &  \winner  22 &   23 &   0.000161 &  \winner  5.39e-05 &   0.00354 &  \winner  0.00124\\ 
-\sc{sc50a} & 78 & 128 & 238 & 0 &  \winner  13 &  \winner  13 &   7.15e-05 &  \winner  5.96e-05 &   0.00093 &  \winner  0.000774\\ 
-\sc{sc50b} & 78 & 128 & 226 & 0 &  \winner  11 &  \winner  11 &   7.22e-05 &  \winner  6.58e-05 &   0.000794 &  \winner  0.000724\\ 
-\sc{blend} & 114 & 188 & 636 & 0 &  \winner  13 &  \winner  13 &   0.000165 &  \winner  7.64e-05 &   0.00214 &  \winner  0.000993\\ 
-\sc{adlittle} & 138 & 194 & 562 & 0 &   18 &  \winner  16 &   7.81e-05 &  \winner  6.81e-05 &   0.00141 &  \winner  0.00109\\ 
-\sc{share2b} & 162 & 258 & 939 & 0 &  \winner  15 &  \winner  15 &   0.000206 &  \winner  9.93e-05 &   0.00309 &  \winner  0.00149\\ 
-\sc{sc105} & 163 & 268 & 503 & 0 &  \winner  14 &  \winner  14 &  \winner  7.82e-05 &   0.000139 &  \winner  0.00109 &   0.00194\\ 
-\sc{stocfor1} & 165 & 282 & 666 & 0 &   18 &  \winner  17 &   0.000151 &  \winner  9.16e-05 &   0.00272 &  \winner  0.00156\\ 
-\sc{scagr7} & 185 & 314 & 650 & 0 &   17 &  \winner  16 &   0.000127 &  \winner  7.49e-05 &   0.00217 &  \winner  0.0012\\ 
-\sc{recipe} & 204 & 364 & 960 & 0 &  \winner  16 &  \winner  16 &   0.00014 &  \winner  9.3e-05 &   0.00224 &  \winner  0.00149\\ 
-\sc{share1b} & 253 & 370 & 1432 & 0 &  \winner  31 &  \winner  31 &   0.000175 &  \winner  0.000128 &   0.00542 &  \winner  0.00398\\ 
-\sc{nug05} & 225 & 435 & 1275 & 0 &  \winner  8 &  \winner  8 &   0.000552 &  \winner  0.0005 &   0.00441 &  \winner  0.004\\ 
-\sc{beaconfd} & 295 & 468 & 3703 & 0 &  \winner  16 &  \winner  16 &  \winner  0.000336 &   0.000365 &  \winner  0.00538 &   0.00585\\ 
-\sc{israel} & 316 & 490 & 2759 & 0 &   28 &  \winner  25 &   0.000226 &  \winner  0.000186 &   0.00633 &  \winner  0.00466\\ 
-\sc{brandy} & 303 & 523 & 2505 & 0 &  \winner  20 &  \winner  20 &   0.000388 &  \winner  0.000213 &   0.00776 &  \winner  0.00425\\ 
-\sc{sc205} & 317 & 522 & 982 & 0 &   17 &  \winner  16 &   0.000148 &  \winner  0.000145 &   0.00252 &  \winner  0.00232\\ 
-\sc{lotfi} & 366 & 519 & 1502 & 0 &  \winner  40 &   43 &  \winner  0.000208 &   0.000233 &  \winner  0.00833 &   0.01\\ 
-\sc{bore3d} & 334 & 578 & 1793 & 0 &  \winner  26 &  \winner  26 &   0.000252 &  \winner  0.000164 &   0.00656 &  \winner  0.00426\\ 
-\sc{vtp\_base} & 346 & 608 & 1461 & 0 &  \winner  25 &  \winner  25 &   0.000301 &  \winner  0.000154 &   0.00752 &  \winner  0.00385\\ 
-\sc{grow7} & 301 & 721 & 3193 & 0 &   55 &  \winner  48 &   0.000426 &  \winner  0.00032 &   0.0234 &  \winner  0.0154\\ 
-\sc{e226} & 472 & 695 & 3240 & 0 &   26 &  \winner  25 &   0.000439 &  \winner  0.000242 &   0.0114 &  \winner  0.00606\\ 
-\sc{bandm} & 472 & 777 & 2966 & 0 &  \winner  25 &  \winner  25 &   0.0003 &  \winner  0.000265 &   0.00749 &  \winner  0.00664\\ 
-\sc{scorpion} & 466 & 854 & 2000 & 0 &  \winner  18 &  \winner  18 &   0.000233 &  \winner  0.000186 &   0.0042 &  \winner  0.00335\\ 
-\sc{nug06} & 486 & 858 & 2718 & 0 &  \winner  9 &  \winner  9 &   0.00211 &  \winner  0.00158 &   0.019 &  \winner  0.0142\\ 
-\sc{capri} & 482 & 870 & 2495 & 0 &  \winner  23 &   24 &  \winner  0.000274 &   0.000304 &  \winner  0.00631 &   0.00729\\ 
-\sc{scfxm1} & 600 & 930 & 3332 & 0 &   30 &  \winner  29 &   0.00041 &  \winner  0.000379 &   0.0123 &  \winner  0.011\\ 
-\sc{stair} & 614 & 970 & 4617 & 0 &  \winner  21 &   22 &  \winner  0.000492 &   0.000804 &  \winner  0.0103 &   0.0177\\ 
-\sc{scsd1} & 760 & 837 & 3148 & 0 &  \winner  11 &  \winner  11 &  \winner  0.000317 &   0.000394 &  \winner  0.00348 &   0.00433\\ 
-\sc{tuff} & 628 & 985 & 5213 & 0 &   38 &  \winner  32 &  \winner  0.000945 &   0.00121 &  \winner  0.0359 &   0.0387\\ 
-\sc{sctap1} & 660 & 960 & 2532 & 0 &  \winner  23 &  \winner  23 &   0.000601 &  \winner  0.000579 &   0.0138 &  \winner  0.0133\\ 
-\sc{agg} & 615 & 1103 & 3477 & 0 &  \winner  28 &   29 &   0.000501 &  \winner  0.000355 &   0.014 &  \winner  0.0103\\ 
-\sc{scagr25} & 671 & 1142 & 2396 & 0 &   19 &  \winner  18 &   0.000435 &  \winner  0.000209 &   0.00826 &  \winner  0.00377\\ 
-\sc{degen2} & 757 & 1201 & 4958 & 0 &  \winner  13 &  \winner  13 &   0.00121 &  \winner  0.000776 &   0.0157 &  \winner  0.0101\\ 
-\sc{agg2} & 758 & 1274 & 5498 & 0 &  \winner  125 &   - &  \winner  0.00137 &   - &  \winner  0.172 &   -\\ 
-\sc{agg3} & 758 & 1274 & 5514 & 0 &  \winner  80 &   - &  \winner  0.00158 &   - &  \winner  0.126 &   -\\ 
-\sc{etamacro} & 816 & 1351 & 3488 & 0 &  \winner  39 &  \winner  39 &   0.00126 &  \winner  0.000871 &   0.0493 &  \winner  0.034\\ 
-\sc{grow15} & 645 & 1545 & 6865 & 0 &  \winner  58 &   59 &   0.000903 &  \winner  0.000722 &   0.0524 &  \winner  0.0426\\ 
-\sc{nug07} & 931 & 1533 & 5145 & 0 &  \winner  12 &  \winner  12 &  \winner  0.00517 &   0.00521 &  \winner  0.062 &   0.0625\\ 
-\sc{fffff800} & 1028 & 1552 & 7429 & 0 &   94 &  \winner  62 &   0.00179 &  \winner  0.00167 &   0.168 &  \winner  0.104\\ 
-\sc{finnis} & 1064 & 1597 & 3860 & 0 &   33 &  \winner  32 &   0.000421 &  \winner  0.00041 &   0.0139 &  \winner  0.0131\\ 
-\sc{scsd6} & 1350 & 1497 & 5666 & 0 &  \winner  15 &  \winner  15 &   0.000552 &  \winner  0.000475 &   0.00828 &  \winner  0.00712\\ 
-\sc{standata} & 1274 & 1737 & 4608 & 0 &  \winner  20 &   22 &   0.000745 &  \winner  0.000344 &   0.0149 &  \winner  0.00756\\ 
-\sc{scrs8} & 1275 & 1765 & 4563 & 0 &  \winner  26 &   27 &   0.000429 &  \winner  0.000365 &   0.0111 &  \winner  0.00987\\ 
-\sc{scfxm2} & 1200 & 1860 & 6669 & 0 &   31 &  \winner  30 &   0.0015 &  \winner  0.000725 &   0.0465 &  \winner  0.0217\\ 
-\sc{standmps} & 1274 & 1845 & 5256 & 0 &  \winner  24 &   25 &   0.000584 &  \winner  0.000378 &   0.014 &  \winner  0.00945\\ 
-\sc{fit1d} & 1049 & 2099 & 15502 & 0 &  \winner  48 &   51 &  \winner  0.000736 &   0.000921 &  \winner  0.0353 &   0.0469\\ 
-\sc{gfrd\_pnc} & 1160 & 2034 & 3863 & 0 &  \winner  20 &  \winner  20 &   0.000464 &  \winner  0.000342 &   0.00929 &  \winner  0.00683\\ 
-\sc{grow22} & 946 & 2266 & 10078 & 0 &   60 &  \winner  52 &   0.00208 &  \winner  0.00133 &   0.125 &  \winner  0.069\\ 
-\sc{standgub} & 1383 & 1848 & 4825 & 0 &  \winner  20 &   22 &   0.000525 &  \winner  0.000445 &   0.0105 &  \winner  0.00979\\ 
-\sc{ship04s} & 1506 & 1908 & 5906 & 0 &   25 &  \winner  24 &  \winner  0.00053 &   0.000669 &  \winner  0.0133 &   0.0161\\ 
-\sc{bnl1} & 1586 & 2229 & 7118 & 0 &   37 &  \winner  35 &  \winner  0.000962 &   0.00098 &   0.0356 &  \winner  0.0343\\ 
-\sc{perold} & 1506 & 2309 & 7832 & 0 &   67 &  \winner  59 &   0.00296 &  \winner  0.00213 &   0.198 &  \winner  0.126\\ 
-\sc{modszk1} & 1620 & 2305 & 4786 & 0 &   39 &  \winner  38 &   0.000556 &  \winner  0.000443 &   0.0217 &  \winner  0.0168\\ 
-\sc{nug08} & 1632 & 2544 & 8928 & 0 &  \winner  10 &  \winner  10 &   0.0257 &  \winner  0.018 &   0.257 &  \winner  0.18\\ 
-\sc{qap8} & 1632 & 2544 & 8928 & 0 &  \winner  10 &  \winner  10 &   0.0157 &  \winner  0.0147 &   0.157 &  \winner  0.147\\ 
-\sc{shell} & 1777 & 2430 & 5452 & 0 &  \winner  29 &  \winner  29 &   0.000638 &  \winner  0.000511 &   0.0185 &  \winner  0.0148\\ 
-\sc{fit1p} & 1677 & 2703 & 11944 & 0 &   28 &  \winner  27 &  \winner  0.000694 &   0.00144 &  \winner  0.0194 &   0.0388\\ 
-\sc{25fv47} & 1876 & 2697 & 12581 & 0 &   39 &  \winner  36 &  \winner  0.00229 &   0.00231 &   0.0894 &  \winner  0.0832\\ 
-\sc{scfxm3} & 1800 & 2790 & 10006 & 0 &   36 &  \winner  32 &   0.00196 &  \winner  0.00147 &   0.0707 &  \winner  0.0472\\ 
-\sc{ship04l} & 2166 & 2568 & 8546 & 0 &   23 &  \winner  20 &   0.00149 &  \winner  0.000601 &   0.0343 &  \winner  0.012\\ 
-\sc{maros} & 1966 & 2812 & 12103 & 0 &   40 &  \winner  38 &   0.00355 &  \winner  0.00229 &   0.142 &  \winner  0.0872\\ 
-\sc{ganges} & 1706 & 3412 & 9040 & 0 &   75 &  \winner  45 &   0.00218 &  \winner  0.00176 &   0.164 &  \winner  0.0792\\ 
-\sc{wood1p} & 2595 & 2839 & 72811 & 0 &  \winner  44 &   60 &   0.00774 &  \winner  0.00617 &  \winner  0.341 &   0.37\\ 
-\sc{ship08s} & 2467 & 3245 & 9661 & 0 &   31 &  \winner  26 &   0.00101 &  \winner  0.00072 &   0.0315 &  \winner  0.0187\\ 
-\sc{scsd8} & 2750 & 3147 & 11334 & 0 &  \winner  16 &  \winner  16 &  \winner  0.000773 &   0.000948 &  \winner  0.0124 &   0.0152\\ 
-\sc{sctap2} & 2500 & 3590 & 9834 & 0 &  \winner  14 &  \winner  14 &   0.00135 &  \winner  0.000886 &   0.0189 &  \winner  0.0124\\ 
-\sc{degen3} & 2604 & 4107 & 28036 & 0 &  \winner  16 &  \winner  16 &   0.0133 &  \winner  0.00714 &   0.213 &  \winner  0.114\\ 
-\sc{pilot\_we} & 2928 & 3864 & 12407 & 0 &   60 &  \winner  58 &   0.00189 &  \winner  0.00169 &   0.114 &  \winner  0.0981\\ 
-\sc{ship12s} & 2869 & 4020 & 11153 & 0 &  \winner  31 &  \winner  31 &   0.00167 &  \winner  0.000895 &   0.0519 &  \winner  0.0277\\ 
-\sc{czprob} & 3562 & 4491 & 14270 & 0 &  \winner  42 &  \winner  42 &   0.00127 &  \winner  0.00108 &   0.0532 &  \winner  0.0452\\ 
-\sc{sctap3} & 3340 & 4820 & 13074 & 0 &   16 &  \winner  15 &   0.00137 &  \winner  0.00112 &   0.022 &  \winner  0.0168\\ 
-\sc{stocfor2} & 3045 & 5202 & 12402 & 0 &   35 &  \winner  33 &   0.00181 &  \winner  0.00129 &   0.0633 &  \winner  0.0424\\ 
-\sc{sierra} & 2735 & 5978 & 12752 & 0 &  \winner  34 &  \winner  34 &  \winner  0.00172 &   0.0027 &  \winner  0.0583 &   0.0917\\ 
-\sc{cycle} & 3371 & 5344 & 24675 & 0 &   - &  \winner  167 &   - &  \winner  0.00729 &   - &  \winner  1.22\\ 
-\sc{ship08l} & 4363 & 5141 & 17245 & 0 &   32 &  \winner  28 &   0.00164 &  \winner  0.00114 &   0.0524 &  \winner  0.0318\\ 
-\sc{bnl2} & 4486 & 6810 & 19482 & 0 &   45 &  \winner  42 &   0.00712 &  \winner  0.00566 &   0.32 &  \winner  0.238\\ 
-\sc{pilot} & 4860 & 7341 & 50275 & 0 &  \winner  61 &   63 &   0.028 &  \winner  0.021 &   1.71 &  \winner  1.32\\ 
-\sc{ship12l} & 5533 & 6684 & 21809 & 0 &   35 &  \winner  34 &  \winner  0.00208 &   0.00228 &  \winner  0.0727 &   0.0777\\ 
-\sc{d6cube} & 6184 & 6599 & 43888 & 0 &  \winner  66 &   118 &   0.0101 &  \winner  0.00714 &  \winner  0.669 &   0.842\\ 
-\sc{ken\_07} & 3602 & 9630 & 15608 & 0 &  \winner  28 &  \winner  28 &  \winner  0.00183 &   0.00183 &  \winner  0.0511 &   0.0512\\ 
-\sc{d2q06c} & 5831 & 8002 & 38912 & 0 &   70 &  \winner  69 &   0.0141 &  \winner  0.0137 &   0.985 &  \winner  0.948\\ 
-\sc{greenbeb} & 5598 & 8277 & 36955 & 0 &  \winner  91 &  \winner  91 &   0.013 &  \winner  0.0109 &   1.19 &  \winner  0.995\\ 
-\sc{cre\_c} & 6411 & 9479 & 22388 & 0 &   58 &  \winner  41 &  \winner  0.00461 &   0.0101 &  \winner  0.267 &   0.415\\ 
-\sc{woodw} & 8418 & 9516 & 45905 & 0 &  \winner  30 &   31 &   0.00543 &  \winner  0.00463 &   0.163 &  \winner  0.143\\ 
-\sc{cre\_a} & 7248 & 10764 & 25416 & 0 &   45 &  \winner  34 &   0.00624 &  \winner  0.00382 &   0.281 &  \winner  0.13\\ 
-\sc{truss} & 8806 & 9806 & 36642 & 0 &  \winner  31 &  \winner  31 &   0.00722 &  \winner  0.00673 &   0.224 &  \winner  0.209\\ 
-\sc{pds\_02} & 7716 & 12803 & 26421 & 0 &   40 &  \winner  37 &   0.0117 &  \winner  0.0031 &   0.469 &  \winner  0.115\\ 
-\sc{nug12} & 8856 & 12048 & 47160 & 0 &  \winner  20 &  \winner  20 &   0.94 &  \winner  0.778 &   18.8 &  \winner  15.6\\ 
-\sc{qap12} & 8856 & 12048 & 47160 & 0 &  \winner  20 &  \winner  20 &   0.955 &  \winner  0.808 &   19.1 &  \winner  16.2\\ 
-\sc{maros\_r7} & 9408 & 12544 & 154256 & 0 &  \winner  17 &  \winner  17 &   0.158 &  \winner  0.14 &   2.68 &  \winner  2.38\\ 
-\sc{80bau3b} & 12061 & 17309 & 38311 & 0 &  \winner  45 &  \winner  45 &   0.0118 &  \winner  0.00433 &   0.529 &  \winner  0.195\\ 
-\sc{fit2d} & 10524 & 21049 & 150066 & 0 &  \winner  26 &  \winner  26 &   0.0103 &  \winner  0.00773 &   0.269 &  \winner  0.201\\ 
-\sc{fit2p} & 13525 & 24025 & 71309 & 0 &   27 &  \winner  26 &   0.00753 &  \winner  0.00609 &   0.203 &  \winner  0.158\\ 
-\sc{nug15} & 22275 & 28605 & 117225 & 0 &  \winner  23 &   24 &   7.53 &  \winner  7.16 &    173 &  \winner   172\\ 
-\sc{qap15} & 22275 & 28605 & 117225 & 0 &  \winner  23 &   24 &   7.79 &  \winner  7.17 &    179 &  \winner   172\\ 
-\sc{osa\_07} & 25067 & 26185 & 169879 & 0 &   35 &  \winner  27 &   0.0268 &  \winner  0.0147 &   0.937 &  \winner  0.397\\ 
-\sc{stocfor3} & 23541 & 40216 & 96262 & 0 &   60 &  \winner  56 &  \winner  0.0169 &   0.0188 &  \winner  1.01 &   1.05\\ 
-\sc{pds\_06} & 29351 & 48472 & 101811 & 0 &   76 &  \winner  72 &   0.0979 &  \winner  0.0779 &   7.44 &  \winner  5.61\\ 
-\sc{ken\_11} & 21349 & 57392 & 91756 & 0 &  \winner  38 &   39 &   0.0168 &  \winner  0.0146 &   0.638 &  \winner  0.569\\ 
-\sc{pds\_10} & 49932 & 82638 & 173685 & 0 &  \winner  87 &   88 &   0.509 &  \winner  0.319 &   44.3 &  \winner  28.1\\ 
-\sc{ken\_13} & 42659 & 113950 & 182564 & 0 &  \winner  41 &   43 &   0.0557 &  \winner  0.038 &   2.28 &  \winner  1.63\\ 
+\sc{afiro} & 51 & 78 & 153 & 0 &   11 &  \winner  8 &   0.000131 &  \winner  6.03e-05 &   0.00144 &  \winner  0.000483\\ 
+\sc{kb2} & 68 & 120 & 390 & 0 &   23 &  \winner  16 &  \winner  4.21e-05 &   8.14e-05 &  \winner  0.000969 &   0.0013\\ 
+\sc{sc50a} & 78 & 128 & 238 & 0 &   13 &  \winner  9 &   0.000104 &  \winner  5.4e-05 &   0.00135 &  \winner  0.000486\\ 
+\sc{sc50b} & 78 & 128 & 226 & 0 &   11 &  \winner  8 &  \winner  0.00011 &   0.000123 &   0.0012 &  \winner  0.000986\\ 
+\sc{blend} & 114 & 188 & 636 & 0 &   13 &  \winner  11 &  \winner  7.44e-05 &   0.000178 &  \winner  0.000967 &   0.00196\\ 
+\sc{adlittle} & 138 & 194 & 562 & 0 &   16 &  \winner  12 &   0.000148 &  \winner  9.18e-05 &   0.00238 &  \winner  0.0011\\ 
+\sc{share2b} & 162 & 258 & 939 & 0 &   15 &  \winner  12 &  \winner  0.000154 &   0.00026 &  \winner  0.00231 &   0.00313\\ 
+\sc{sc105} & 163 & 268 & 503 & 0 &   14 &  \winner  10 &   0.000101 &  \winner  9.42e-05 &   0.00141 &  \winner  0.000942\\ 
+\sc{stocfor1} & 165 & 282 & 666 & 0 &   17 &  \winner  16 &  \winner  9.59e-05 &   0.000204 &  \winner  0.00163 &   0.00326\\ 
+\sc{scagr7} & 185 & 314 & 650 & 0 &   16 &  \winner  15 &   0.000239 &  \winner  0.000148 &   0.00383 &  \winner  0.00222\\ 
+\sc{recipe} & 204 & 364 & 960 & 0 &   16 &  \winner  10 &  \winner  0.000104 &   0.000135 &   0.00166 &  \winner  0.00135\\ 
+\sc{share1b} & 253 & 370 & 1432 & 0 &   - &  \winner  22 &   - &  \winner  0.000204 &   - &  \winner  0.00448\\ 
+\sc{nug05} & 225 & 435 & 1275 & 0 &   8 &  \winner  7 &  \winner  0.000707 &   0.00248 &  \winner  0.00566 &   0.0174\\ 
+\sc{beaconfd} & 295 & 468 & 3703 & 0 &   - &  \winner  9 &   - &  \winner  0.000492 &   - &  \winner  0.00443\\ 
+\sc{israel} & 316 & 490 & 2759 & 0 &   25 &  \winner  19 &  \winner  0.000316 &   0.000318 &   0.0079 &  \winner  0.00604\\ 
+\sc{brandy} & 303 & 523 & 2505 & 0 &   20 &  \winner  15 &  \winner  0.000412 &   0.000704 &  \winner  0.00825 &   0.0106\\ 
+\sc{sc205} & 317 & 522 & 982 & 0 &   16 &  \winner  13 &  \winner  0.000173 &   0.000351 &  \winner  0.00277 &   0.00456\\ 
+\sc{lotfi} & 366 & 519 & 1502 & 0 &   25 &  \winner  19 &   0.000324 &  \winner  0.000212 &   0.00809 &  \winner  0.00402\\ 
+\sc{bore3d} & 334 & 578 & 1793 & 0 &   26 &  \winner  19 &  \winner  0.000181 &   0.000276 &  \winner  0.0047 &   0.00525\\ 
+\sc{vtp\_base} & 346 & 608 & 1461 & 0 &  \winner  22 &   31 &   0.000306 &  \winner  0.000181 &   0.00673 &  \winner  0.00563\\ 
+\sc{grow7} & 301 & 721 & 3193 & 0 &   32 &  \winner  13 &  \winner  0.00039 &   0.000743 &   0.0125 &  \winner  0.00966\\ 
+\sc{e226} & 472 & 695 & 3240 & 0 &   25 &  \winner  22 &   0.0171 &  \winner  0.000537 &   0.426 &  \winner  0.0118\\ 
+\sc{bandm} & 472 & 777 & 2966 & 0 &   25 &  \winner  18 &   0.000567 &  \winner  0.000379 &   0.0142 &  \winner  0.00681\\ 
+\sc{scorpion} & 466 & 854 & 2000 & 0 &   18 &  \winner  12 &  \winner  0.000255 &   0.000461 &  \winner  0.00458 &   0.00554\\ 
+\sc{nug06} & 486 & 858 & 2718 & 0 &   9 &  \winner  7 &   0.00283 &  \winner  0.00251 &   0.0255 &  \winner  0.0175\\ 
+\sc{capri} & 482 & 870 & 2495 & 0 &   24 &  \winner  21 &  \winner  0.000399 &   0.000709 &  \winner  0.00959 &   0.0149\\ 
+\sc{scfxm1} & 600 & 930 & 3332 & 0 &   - &  \winner  19 &   - &  \winner  0.00077 &   - &  \winner  0.0146\\ 
+\sc{stair} & 614 & 970 & 4617 & 0 &   - &  \winner  22 &   - &  \winner  0.00112 &   - &  \winner  0.0245\\ 
+\sc{scsd1} & 760 & 837 & 3148 & 0 &   11 &  \winner  10 &   0.000472 &  \winner  0.000423 &   0.00519 &  \winner  0.00423\\ 
+\sc{tuff} & 628 & 985 & 5213 & 0 &   - &  \winner  21 &   - &  \winner  0.00116 &   - &  \winner  0.0243\\ 
+\sc{sctap1} & 660 & 960 & 2532 & 0 &  \winner  23 &   26 &  \winner  0.000349 &   0.000584 &  \winner  0.00803 &   0.0152\\ 
+\sc{agg} & 615 & 1103 & 3477 & 0 &   - &  \winner  45 &   - &  \winner  0.00071 &   - &  \winner  0.032\\ 
+\sc{scagr25} & 671 & 1142 & 2396 & 0 &   18 &  \winner  17 &  \winner  0.000221 &   0.000452 &  \winner  0.00398 &   0.00769\\ 
+\sc{degen2} & 757 & 1201 & 4958 & 0 &   13 &  \winner  11 &  \winner  0.00133 &   0.00169 &  \winner  0.0172 &   0.0186\\ 
+\sc{agg2} & 758 & 1274 & 5498 & 0 &   - &  \winner  26 &   - &  \winner  0.00211 &   - &  \winner  0.0548\\ 
+\sc{agg3} & 758 & 1274 & 5514 & 0 &   - &  \winner  25 &   - &  \winner  0.00162 &   - &  \winner  0.0406\\ 
+\sc{etamacro} & 816 & 1351 & 3488 & 0 &   39 &  \winner  25 &  \winner  0.00125 &   0.00145 &   0.0486 &  \winner  0.0362\\ 
+\sc{grow15} & 645 & 1545 & 6865 & 0 &   33 &  \winner  13 &  \winner  0.000537 &   0.00113 &   0.0177 &  \winner  0.0147\\ 
+\sc{nug07} & 931 & 1533 & 5145 & 0 &   12 &  \winner  11 &  \winner  0.00722 &   0.00767 &   0.0866 &  \winner  0.0843\\ 
+\sc{fffff800} & 1028 & 1552 & 7429 & 0 &   - &  \winner  36 &   - &  \winner  0.00212 &   - &  \winner  0.0761\\ 
+\sc{finnis} & 1064 & 1597 & 3860 & 0 &  \winner  32 &   36 &  \winner  0.000525 &   0.000641 &  \winner  0.0168 &   0.0231\\ 
+\sc{pilot4} & 1123 & 1692 & 6546 & 0 &   - &  \winner  38 &   - &  \winner  0.00128 &   - &  \winner  0.0486\\ 
+\sc{scsd6} & 1350 & 1497 & 5666 & 0 &   15 &  \winner  13 &  \winner  0.000457 &   0.000943 &  \winner  0.00685 &   0.0123\\ 
+\sc{standata} & 1274 & 1737 & 4608 & 0 &   22 &  \winner  12 &   0.000907 &  \winner  0.000702 &   0.02 &  \winner  0.00842\\ 
+\sc{scrs8} & 1275 & 1765 & 4563 & 0 &  \winner  27 &   28 &  \winner  0.000577 &   0.000933 &  \winner  0.0156 &   0.0261\\ 
+\sc{scfxm2} & 1200 & 1860 & 6669 & 0 &   - &  \winner  22 &   - &  \winner  0.00137 &   - &  \winner  0.0301\\ 
+\sc{standmps} & 1274 & 1845 & 5256 & 0 &   25 &  \winner  17 &  \winner  0.000513 &   0.000992 &  \winner  0.0128 &   0.0169\\ 
+\sc{fit1d} & 1049 & 2099 & 15502 & 0 &   51 &  \winner  28 &  \winner  0.000804 &   0.00103 &   0.041 &  \winner  0.0287\\ 
+\sc{gfrd\_pnc} & 1160 & 2034 & 3863 & 0 &   20 &  \winner  14 &  \winner  0.000506 &   0.000773 &  \winner  0.0101 &   0.0108\\ 
+\sc{grow22} & 946 & 2266 & 10078 & 0 &   34 &  \winner  14 &  \winner  0.00121 &   0.00122 &   0.0412 &  \winner  0.0171\\ 
+\sc{standgub} & 1383 & 1848 & 4825 & 0 &   22 &  \winner  12 &  \winner  0.000469 &   0.000635 &   0.0103 &  \winner  0.00762\\ 
+\sc{ship04s} & 1506 & 1908 & 5906 & 0 &   24 &  \winner  17 &  \winner  0.000709 &   0.00132 &  \winner  0.017 &   0.0225\\ 
+\sc{bnl1} & 1586 & 2229 & 7118 & 0 &  \winner  35 &   57 &  \winner  0.00148 &   0.0017 &  \winner  0.0519 &   0.0969\\ 
+\sc{perold} & 1506 & 2309 & 7832 & 0 &   - &  \winner  56 &   - &  \winner  0.00178 &   - &  \winner  0.0996\\ 
+\sc{modszk1} & 1620 & 2305 & 4786 & 0 &   36 &  \winner  27 &  \winner  0.000891 &   0.000927 &   0.0321 &  \winner  0.025\\ 
+\sc{nug08} & 1632 & 2544 & 8928 & 0 &   10 &  \winner  9 &  \winner  0.0221 &   0.0268 &  \winner  0.221 &   0.241\\ 
+\sc{qap8} & 1632 & 2544 & 8928 & 0 &   10 &  \winner  9 &   0.0261 &  \winner  0.0253 &   0.261 &  \winner  0.227\\ 
+\sc{shell} & 1777 & 2430 & 5452 & 0 &   29 &  \winner  17 &  \winner  0.000625 &   0.00105 &   0.0181 &  \winner  0.0178\\ 
+\sc{fit1p} & 1677 & 2703 & 11944 & 0 &   27 &  \winner  18 &  \winner  0.000818 &   0.00111 &   0.0221 &  \winner  0.02\\ 
+\sc{25fv47} & 1876 & 2697 & 12581 & 0 &   37 &  \winner  27 &   0.00371 &  \winner  0.00321 &   0.137 &  \winner  0.0868\\ 
+\sc{scfxm3} & 1800 & 2790 & 10006 & 0 &   - &  \winner  22 &   - &  \winner  0.00156 &   - &  \winner  0.0344\\ 
+\sc{ship04l} & 2166 & 2568 & 8546 & 0 &   20 &  \winner  17 &  \winner  0.000945 &   0.0011 &   0.0189 &  \winner  0.0186\\ 
+\sc{maros} & 1966 & 2812 & 12103 & 0 &   38 &  \winner  28 &  \winner  0.00301 &   0.00421 &  \winner  0.114 &   0.118\\ 
+\sc{ganges} & 1706 & 3412 & 9040 & 0 &   - &  \winner  35 &   - &  \winner  0.00153 &   - &  \winner  0.0537\\ 
+\sc{wood1p} & 2595 & 2839 & 72811 & 0 &   28 &  \winner  16 &  \winner  0.00631 &   0.00836 &   0.177 &  \winner  0.134\\ 
+\sc{ship08s} & 2467 & 3245 & 9661 & 0 &   26 &  \winner  16 &  \winner  0.00128 &   0.00157 &   0.0332 &  \winner  0.0251\\ 
+\sc{pilot\_ja} & 2267 & 3458 & 17495 & 0 &   - &  \winner  62 &   - &  \winner  0.00599 &   - &  \winner  0.372\\ 
+\sc{scsd8} & 2750 & 3147 & 11334 & 0 &   16 &  \winner  11 &  \winner  0.000997 &   0.00112 &   0.0159 &  \winner  0.0123\\ 
+\sc{sctap2} & 2500 & 3590 & 9834 & 0 &  \winner  14 &   16 &   0.00192 &  \winner  0.00121 &   0.0269 &  \winner  0.0194\\ 
+\sc{pilotnov} & 2446 & 3761 & 16117 & 0 &   - &  \winner  21 &   - &  \winner  0.00563 &   - &  \winner  0.118\\ 
+\sc{degen3} & 2604 & 4107 & 28036 & 0 &   16 &  \winner  14 &  \winner  0.0095 &   0.0405 &  \winner  0.152 &   0.567\\ 
+\sc{pilot\_we} & 2928 & 3864 & 12407 & 0 &   - &  \winner  66 &   - &  \winner  0.00246 &   - &  \winner  0.163\\ 
+\sc{ship12s} & 2869 & 4020 & 11153 & 0 &   31 &  \winner  21 &   0.0016 &  \winner  0.00147 &   0.0496 &  \winner  0.0308\\ 
+\sc{czprob} & 3562 & 4491 & 14270 & 0 &  \winner  42 &   43 &  \winner  0.00134 &   0.00156 &  \winner  0.0563 &   0.0672\\ 
+\sc{sctap3} & 3340 & 4820 & 13074 & 0 &  \winner  15 &   16 &  \winner  0.00167 &   0.00182 &  \winner  0.0251 &   0.029\\ 
+\sc{stocfor2} & 3045 & 5202 & 12402 & 0 &   33 &  \winner  29 &  \winner  0.0016 &   0.00178 &   0.0528 &  \winner  0.0515\\ 
+\sc{sierra} & 2735 & 5978 & 12752 & 0 &   34 &  \winner  18 &  \winner  0.00124 &   0.00219 &   0.0422 &  \winner  0.0395\\ 
+\sc{cycle} & 3371 & 5344 & 24675 & 0 &   - &  \winner  38 &   - &  \winner  0.00554 &   - &  \winner  0.21\\ 
+\sc{ship08l} & 4363 & 5141 & 17245 & 0 &   28 &  \winner  18 &   0.0177 &  \winner  0.00197 &   0.495 &  \winner  0.0355\\ 
+\sc{bnl2} & 4486 & 6810 & 19482 & 0 &   43 &  \winner  34 &  \winner  0.00851 &   0.00874 &   0.366 &  \winner  0.297\\ 
+\sc{pilot} & 4860 & 7341 & 50275 & 0 &  \winner  49 &   64 &   0.0237 &  \winner  0.0229 &  \winner  1.16 &   1.47\\ 
+\sc{ship12l} & 5533 & 6684 & 21809 & 0 &   34 &  \winner  29 &  \winner  0.00186 &   0.00338 &  \winner  0.0631 &   0.0979\\ 
+\sc{ken\_07} & 3602 & 9630 & 15608 & 0 &   28 &  \winner  17 &  \winner  0.00217 &   0.00286 &   0.0607 &  \winner  0.0486\\ 
+\sc{d2q06c} & 5831 & 8002 & 38912 & 0 &   - &  \winner  32 &   - &  \winner  0.0186 &   - &  \winner  0.594\\ 
+\sc{greenbeb} & 5598 & 8277 & 36955 & 0 &   - &  \winner  66 &   - &  \winner  0.0157 &   - &  \winner  1.03\\ 
+\sc{greenbea} & 5598 & 8280 & 36958 & 0 &   - &  \winner  42 &   - &  \winner  0.0144 &   - &  \winner  0.603\\ 
+\sc{cre\_c} & 6411 & 9479 & 22388 & 0 &   41 &  \winner  27 &  \winner  0.00391 &   0.00779 &  \winner  0.16 &   0.21\\ 
+\sc{pilot87} & 6680 & 10288 & 83207 & 0 &  \winner  83 &   102 &  \winner  0.0912 &   0.0968 &  \winner  7.57 &   9.87\\ 
+\sc{woodw} & 8418 & 9516 & 45905 & 0 &   31 &  \winner  26 &  \winner  0.00759 &   0.00789 &   0.235 &  \winner  0.205\\ 
+\sc{cre\_a} & 7248 & 10764 & 25416 & 0 &   36 &  \winner  22 &  \winner  0.00452 &   0.00551 &   0.163 &  \winner  0.121\\ 
+\sc{truss} & 8806 & 9806 & 36642 & 0 &   31 &  \winner  20 &   0.00941 &  \winner  0.00645 &   0.292 &  \winner  0.129\\ 
+\sc{pds\_02} & 7716 & 12803 & 26421 & 0 &   37 &  \winner  34 &  \winner  0.00604 &   0.00722 &  \winner  0.223 &   0.246\\ 
+\sc{nug12} & 8856 & 12048 & 47160 & 0 &  \winner  20 &  \winner  20 &  \winner  1.07 &   1.19 &  \winner  21.4 &   23.8\\ 
+\sc{qap12} & 8856 & 12048 & 47160 & 0 &  \winner  20 &  \winner  20 &  \winner   1.1 &   1.16 &  \winner    22 &   23.2\\ 
+\sc{maros\_r7} & 9408 & 12544 & 154256 & 0 &   17 &  \winner  14 &  \winner  0.237 &   0.293 &  \winner  4.04 &    4.1\\ 
+\sc{80bau3b} & 12061 & 17309 & 38311 & 0 &   45 &  \winner  37 &  \winner  0.0078 &   0.0186 &  \winner  0.351 &   0.689\\ 
+\sc{fit2d} & 10524 & 21049 & 150066 & 0 &   26 &  \winner  24 &  \winner  0.0097 &   0.0134 &  \winner  0.252 &   0.321\\ 
+\sc{fit2p} & 13525 & 24025 & 71309 & 0 &   26 &  \winner  21 &  \winner  0.00874 &   0.0104 &   0.227 &  \winner  0.218\\ 
+\sc{nug15} & 22275 & 28605 & 117225 & 0 &  \winner  24 &  \winner  24 &   10.9 &  \winner  8.94 &    261 &  \winner   215\\ 
+\sc{qap15} & 22275 & 28605 & 117225 & 0 &  \winner  24 &  \winner  24 &  \winner  9.44 &   9.55 &  \winner   227 &    229\\ 
+\sc{osa\_07} & 25067 & 26185 & 169879 & 0 &   27 &  \winner  22 &  \winner  0.0222 &   0.0263 &   0.599 &  \winner  0.579\\ 
+\sc{stocfor3} & 23541 & 40216 & 96262 & 0 &   56 &  \winner  42 &  \winner  0.0236 &   0.0246 &   1.32 &  \winner  1.03\\ 
+\sc{pds\_06} & 29351 & 48472 & 101811 & 0 &   72 &  \winner  46 &  \winner  0.107 &   0.114 &   7.69 &  \winner  5.24\\ 
+\sc{ken\_11} & 21349 & 57392 & 91756 & 0 &   39 &  \winner  25 &  \winner  0.0201 &   0.0315 &  \winner  0.783 &   0.788\\ 
+\sc{pds\_10} & 49932 & 82638 & 173685 & 0 &   88 &  \winner  61 &   0.561 &  \winner  0.551 &   49.4 &  \winner  33.6\\ 
+\sc{ken\_13} & 42659 & 113950 & 182564 & 0 &   43 &  \winner  27 &  \winner  0.0557 &   0.0635 &    2.4 &  \winner  1.71\\ 
 \end{longtable}
