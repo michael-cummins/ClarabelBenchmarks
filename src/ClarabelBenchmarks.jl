@@ -95,6 +95,18 @@ module ClarabelBenchmarks
     end
     export QTQP_indirect
 
+    module QTQP_clarabel
+        using QTQP
+        Optimizer = QTQP.Optimizer
+    end
+    export QTQP_clarabel
+
+    module QTQP_pardiso
+        using QTQP
+        Optimizer = QTQP.Optimizer
+    end
+    export QTQP_pardiso
+
     module QTQP_shifted
         using QTQP
         Optimizer = QTQP.Optimizer

@@ -1,5 +1,5 @@
 using LinearAlgebra, SparseArrays, Random
-using MosekTools
+# using MosekTools
 using Clarabel
 using Hypatia
 """

@@ -6,13 +6,13 @@ using Clarabel, QTQP
 # using Gurobi, MosekTools
 # using ClarabelRs
 
-solvers = [QTQP,Clarabel]
+solvers = [QTQP_pardiso, QTQP]
 tag     = nothing
 class   = "maros"
 verbose = false
 time_limit = 300.
-rerun = false
-plotlist = [QTQP, Clarabel]
+rerun = true
+plotlist = [QTQP_pardiso, QTQP]
 
 
 df = ClarabelBenchmarks.benchmark(

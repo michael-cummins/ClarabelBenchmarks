@@ -1,0 +1,19 @@
+Module[ClarabelBenchmarks.QTQP_pardiso, QTQP]
+Saving benchmark data to new file: /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/../results/jld2/bench_maros_ClarabelBenchmarks.QTQP_pardiso.jld2
+Solving with ClarabelBenchmarks.QTQP_pardiso
+Dict{String, Dict} with 1 entry:
+  "maros" => Dict{Any, Any}()
+Solving : CVXQP1_M [1/129]
+initialized new worker.  pid = [2]
+calling remote_package_reload with QTQP
+calling remote_solve_dummies with QTQP.MOIwrapper.Optimizer
+      From worker 2:	solving dummies on pid = 2
+
+====================================
+CPU Time used: 00:01:06
+CPU Percent: 20%
+Memory usage: 4681692kb
+Approx Power usage: 0.0002
+Walltime usage: 00:08:25
+
+====================================

@@ -99,19 +99,30 @@ SOLVER_CONFIG[:SDPT3] = SettingsDict(
 )
 
 SOLVER_CONFIG[:QTQP] = SettingsDict(
+    :equilibrate => :augmented,
     :min_static_regularization => 1e-8,
-    :equilibrate => true,
+    :termination => :qtqp,
+    :step_size_scale => 0.99,
+    :max_iterative_refinement_steps => 10,
+    :direct_ldl_solver => :qdldl
 )
 
-SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_indirect")] = SettingsDict(
-    :atol => 1e-3,
-    :rtol => 1e-3,
-    :linear_solver_atol => 1e-12,
-    :linear_solver_rtol => 1e-7,
-    :kkt_solver => :indirect,
-    :indirect_solve_method => :gmres,
-    :indirect_preconditioner => :nystrom,
-    :verbose => true
+SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_pardiso")] = SettingsDict(
+    :equilibrate => :augmented,
+    :min_static_regularization => 1e-8,
+    :termination => :qtqp,
+    :step_size_scale => 0.99,
+    :max_iterative_refinement_steps => 10,
+    :direct_ldl_solver => :mkl
+)
+
+SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_clarabel")] = SettingsDict(
+    :shifted_central_path => false,
+    :equilibrate => :augmented,
+    :min_static_regularization => 1e-8,
+    :termination => :clarabel,
+    :step_size_scale => 0.99,
+    :max_iterative_refinement_steps => 10
 )
 
 SOLVER_CONFIG[Symbol("ClarabelBenchmarks.QTQP_shifted")] = SettingsDict(

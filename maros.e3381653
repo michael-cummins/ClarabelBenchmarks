@@ -1,0 +1,82 @@
+Gurobi shell based on Python 3.11.3 can be launched with command `gurobi.sh`
+Gurobi Python Interface can be loaded in Python 3.11.3 with 'import gurobipy'
+  No Changes to `/var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/Project.toml`
+  No Changes to `/var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/Manifest.toml`
+Precompiling project...
+  24539.5 ms  ✓ QTQP
+ 100474.9 ms  ✓ ClarabelBenchmarks
+  2 dependencies successfully precompiled in 224 seconds. 390 already precompiled.
+  1 dependency had output during precompilation:
+┌ QTQP
+│  WARNING: using Pardiso.solve! in module QTQP conflicts with an existing identifier.
+└  
+ERROR: LoadError: On worker 2:
+MathOptInterface.UnsupportedAttribute{MathOptInterface.RawOptimizerAttribute}: Attribute MathOptInterface.RawOptimizerAttribute("direct_ldl_solver") is not supported by the model.
+Stacktrace:
+  [1] set
+    @ /var/tmp/pbs.3381653.pbs-7/QTQP.jl/src/MOI_wrapper/MOI_wrapper.jl:196 [inlined]
+  [2] set
+    @ ~/.julia/packages/MathOptInterface/iaRBO/src/Utilities/cachingoptimizer.jl:1067
+  [3] set
+    @ ~/.julia/packages/MathOptInterface/iaRBO/src/Bridges/bridge_optimizer.jl:1091 [inlined]
+  [4] set
+    @ ~/.julia/packages/MathOptInterface/iaRBO/src/Utilities/cachingoptimizer.jl:1067
+  [5] set
+    @ ~/.julia/packages/JuMP/EHXNP/src/optimizer_interface.jl:1265
+  [6] set_attribute
+    @ ~/.julia/packages/JuMP/EHXNP/src/optimizer_interface.jl:1518 [inlined]
+  [7] set_attribute
+    @ ~/.julia/packages/JuMP/EHXNP/src/optimizer_interface.jl:1527 [inlined]
+  [8] set_optimizer_attribute
+    @ ~/.julia/packages/JuMP/EHXNP/src/optimizer_interface.jl:77
+  [9] remote_apply_settings
+    @ /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/tools.jl:259
+ [10] run_dummy_problems_inner
+    @ /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/tools.jl:247
+ [11] top-level scope
+    @ /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/tools.jl:228
+ [12] eval
+    @ ./boot.jl:430
+ [13] #invokelatest#2
+    @ ./essentials.jl:1055
+ [14] invokelatest
+    @ ./essentials.jl:1052
+ [15] #114
+    @ /rds/easybuild/rome/apps/software/Julia/1.11.6-linux-x86_64/share/julia/stdlib/v1.11/Distributed/src/process_messages.jl:303
+ [16] run_work_thunk
+    @ /rds/easybuild/rome/apps/software/Julia/1.11.6-linux-x86_64/share/julia/stdlib/v1.11/Distributed/src/process_messages.jl:70
+ [17] run_work_thunk
+    @ /rds/easybuild/rome/apps/software/Julia/1.11.6-linux-x86_64/share/julia/stdlib/v1.11/Distributed/src/process_messages.jl:79
+ [18] #100
+    @ /rds/easybuild/rome/apps/software/Julia/1.11.6-linux-x86_64/share/julia/stdlib/v1.11/Distributed/src/process_messages.jl:88
+Stacktrace:
+  [1] sync_end(c::Channel{Any})
+    @ Base ./task.jl:466
+  [2] macro expansion
+    @ ./task.jl:499 [inlined]
+  [3] remotecall_eval(m::Module, procs::Vector{Int64}, ex::Expr)
+    @ Distributed /rds/easybuild/rome/apps/software/Julia/1.11.6-linux-x86_64/share/julia/stdlib/v1.11/Distributed/src/macros.jl:219
+  [4] macro expansion
+    @ /rds/easybuild/rome/apps/software/Julia/1.11.6-linux-x86_64/share/julia/stdlib/v1.11/Distributed/src/macros.jl:203 [inlined]
+  [5] top-level scope
+    @ /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/tools.jl:229
+  [6] eval
+    @ ./boot.jl:430 [inlined]
+  [7] eval
+    @ /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/ClarabelBenchmarks.jl:1 [inlined]
+  [8] remote_solve_dummies(optimizer_factory::Type, settings::Dict{Symbol, Any})
+    @ ClarabelBenchmarks /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/tools.jl:229
+  [9] solve_with_timeout(time_limit::Float64, classkey::String, test_name::String, optimizer_factory::Type, settings::Dict{Symbol, Any}, verbose::Bool)
+    @ ClarabelBenchmarks /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/tools.jl:183
+ [10] run_benchmarks_inner(optimizer_factory::Type, classkey::String; settings::Dict{Symbol, Any}, verbose::Bool, exclude::Vector{Regex}, include::Vector{Regex}, time_limit::Float64)
+    @ ClarabelBenchmarks /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/tools.jl:110
+ [11] run_benchmark!(package::Module, classkey::String; exclude::Vector{Regex}, time_limit::Float64, verbose::Bool, tag::Nothing, rerun::Bool)
+    @ ClarabelBenchmarks /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/tools.jl:484
+ [12] run_benchmark!
+    @ /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/tools.jl:440 [inlined]
+ [13] benchmark(packages::Vector{Module}, classkey::String; exclude::Vector{Regex}, time_limit::Float64, verbose::Bool, tag::Nothing, rerun::Bool, plotlist::Vector{Module}, ok_status::Nothing)
+    @ ClarabelBenchmarks /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/tools.jl:516
+ [14] top-level scope
+    @ /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/benchmarks/bench_maros.jl:18
+in expression starting at /var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/src/benchmarks/bench_maros.jl:18
+cp: cannot stat '/var/tmp/pbs.3381653.pbs-7/ClarabelBenchmarks/results/jld2/bench_maros_ClarabelBenchmarks.QTQP_pardiso.jld2': No such file or directory

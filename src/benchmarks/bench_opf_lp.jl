@@ -4,13 +4,13 @@
 using ClarabelBenchmarks, DataFrames, JLD2
 using Clarabel, QTQP, HiGHS
 
-solvers = [QTQP, Clarabel]
+solvers = [QTQP, QTQP_clarabel, Clarabel]
 tag     = nothing
 class   = "opf_lp"
 verbose = false
 time_limit = 300.
 rerun = false
-plotlist = [Clarabel,QTQP]
+plotlist = [QTQP, QTQP_clarabel, Clarabel]
 
 df = ClarabelBenchmarks.benchmark(
     solvers, class;
@@ -20,3 +20,4 @@ df = ClarabelBenchmarks.benchmark(
     rerun = rerun,
     plotlist = plotlist)
 
+show(df, allrows=true)
